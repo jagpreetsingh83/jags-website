@@ -1,5 +1,9 @@
-@import "base";
-@import "typography";
-@import "sidebar";
-@import "header";
-@import "footer";
+@import "abstracts/variables";
+
+@import "base/base";
+@import "base/typography";
+
+@import "layout/container";
+@import "layout/header";
+@import "layout/home";
+@import "layout/footer";
