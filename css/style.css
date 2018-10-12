@@ -11,7 +11,7 @@ html {
 
 body {
   font-family: "Roboto", sans-serif;
-  color: #2c3e50;
+  color: #c0392b;
   line-height: 1.6; }
 
 .container {
@@ -22,6 +22,7 @@ body {
 .header {
   padding: 0 3vw;
   background-color: rgba(0, 0, 0, 0.5);
+  transition: all 2s;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -30,10 +31,12 @@ body {
   z-index: 10; }
   .header__logo-box {
     padding: 1rem;
-    background-color: rgba(236, 240, 241, 0.8); }
+    background-color: rgba(0, 0, 0, 0.3); }
   .header__logo {
     height: 5rem;
     display: block; }
+  .header:hover {
+    background-color: #c0392b; }
 
 .navigation {
   list-style: none;
@@ -42,14 +45,32 @@ body {
   align-items: center; }
   .navigation__item {
     display: block;
-    margin: 0 2vw; }
+    position: relative;
+    color: #ecf0f1;
+    transform: color 0.2 cubic-bezier(1, 0, 0, 1) 0.6s; }
+    .navigation__item::before {
+      content: "";
+      width: 3px;
+      height: 100%;
+      background-color: rgba(0, 0, 0, 0.3);
+      position: absolute;
+      transform: scaleY(0);
+      transition: transform 0.2s, width 0.4s cubic-bezier(1, 0, 0, 1) 0.2s;
+      z-index: 0; }
+    .navigation__item:hover::before {
+      transform: scaleY(1);
+      width: 100%; }
   .navigation__link:link, .navigation__link:visited {
     font-size: 1.5rem;
     font-family: "Roboto", sans-serif;
-    color: #ecf0f1;
+    color: currentColor;
     text-transform: uppercase;
     text-decoration: none;
-    font-weight: bolder; }
+    font-weight: bolder;
+    display: block;
+    padding: 1.5rem 3rem;
+    z-index: 10;
+    position: relative; }
 
 .home {
   background-image: linear-gradient(to right, rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url(../img/toronto.jpg);
