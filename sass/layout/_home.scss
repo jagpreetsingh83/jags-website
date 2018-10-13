@@ -14,7 +14,7 @@
     justify-content: center;
     align-items: flex-end;
 
-    &__text {
+    &__box {
         background-image: linear-gradient(to right bottom, rgba($color-primary, 0.7), rgba($color-primary-light, 0.1));
         width: 50vw;
         transform: skewX(-10deg);
