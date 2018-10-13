@@ -1,0 +1,33 @@
+.about {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    background-color: rgba($color: #000000, $alpha: 0.9);
+
+    & > * {
+        margin: 5rem 8rem;
+    }
+
+    &__text {
+        font-size: 1.5rem;
+        color: $color-grey-light;
+        font-family: $font-secondary;
+        padding: 3rem 5rem;
+        background-image: linear-gradient(to right bottom, rgba($color-primary, 0.7), rgba($color-primary-light, 0.1));
+        transform: skewX(-10deg);
+
+        &:hover {
+            background-color: rgba($color-primary, 0.7);
+        }
+
+        p {
+            transform: skewX(10deg);
+        }
+    }
+
+    &__photo {
+        width: 50rem;
+        padding: 3rem 0;
+        filter: grayscale(60%);
+    }
+}

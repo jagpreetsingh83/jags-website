@@ -94,7 +94,8 @@ body {
     font-size: 5rem;
     font-family: "K2D", sans-serif;
     padding: 3rem;
-    position: relative; }
+    position: relative;
+    transition: all .2s; }
     .home__box span:before, .home__box span:after {
       font-size: 20rem;
       font-family: sans-serif;
@@ -109,10 +110,35 @@ body {
       position: absolute;
       bottom: -20rem;
       right: -2.7rem; }
+    .home__box:hover {
+      background-color: rgba(192, 57, 43, 0.7); }
   .home__author {
     font-size: 2rem;
     padding: 4rem 2rem;
     color: #ecf0f1; }
+
+.about {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  background-color: rgba(0, 0, 0, 0.9); }
+  .about > * {
+    margin: 5rem 8rem; }
+  .about__text {
+    font-size: 1.5rem;
+    color: #ecf0f1;
+    font-family: "K2D", sans-serif;
+    padding: 3rem 5rem;
+    background-image: linear-gradient(to right bottom, rgba(192, 57, 43, 0.7), rgba(231, 76, 60, 0.1));
+    transform: skewX(-10deg); }
+    .about__text:hover {
+      background-color: rgba(192, 57, 43, 0.7); }
+    .about__text p {
+      transform: skewX(10deg); }
+  .about__photo {
+    width: 50rem;
+    padding: 3rem 0;
+    filter: grayscale(60%); }
 
 .skills {
   display: grid;
