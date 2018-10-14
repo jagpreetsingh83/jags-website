@@ -1,6 +1,8 @@
 .header {
-    padding: 0 3vw;
-    background-color: rgba(#000, 0.5);
+    position: fixed;
+    width: 100%;
+    background-color: rgba(#fff, 0.3);
+    z-index: 1000;
     transition: all 2s;
 
     // FLEX
@@ -8,25 +10,18 @@
     justify-content: space-between;
     align-items: center;
 
-    // PARENT GRID
-    grid-row: 1 / span 1;
-    grid-column: 1 / -1;
-    z-index: 10;
-
-    &__logo-box {
-        padding: 1rem;
-        background-color: rgba(#000, 0.3);
-    }
-
-    &__logo {
-        height: 5rem;
-
-        // Always display images as block element to get rid of the extra space at the bottom
-        display: block;
-    }
-
     &:hover {
         background-color: $color-primary;
+    }
+}
+
+.logo {
+    padding: 1rem;
+    background-color: rgba(#000, 0.3);
+
+    &__img {
+        height: 5rem;
+        display: block;
     }
 }
 
@@ -35,13 +30,11 @@
 
     // FLEX
     display: flex;
-    justify-content: space-between;
     align-items: center;
 
     &__item {
         display: block;
         position: relative;
-        color: $color-grey-light;
         transform: color 0.2 ease-in 0.6s;
 
         &::before {
@@ -65,7 +58,7 @@
     &__link:link,
     &__link:visited {
         font-size: 1.5rem;
-        font-family: $font-primary;
+        font-family: $font-secondary;
         color: currentColor;
         text-transform: uppercase;
         text-decoration: none;

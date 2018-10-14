@@ -1,20 +1,15 @@
 .about {
+    padding: 10rem 8rem;
+    background-color: rgba(#000, $alpha: 1);
     display: flex;
-    align-items: flex-start;
-    justify-content: space-between;
-    background-color: rgba($color: #000000, $alpha: 0.9);
+    align-items: center;
 
-    & > * {
-        margin: 5rem 8rem;
-    }
-
-    &__text {
+    &__text-box {
         font-size: 1.5rem;
-        color: $color-grey-light;
         font-family: $font-secondary;
-        padding: 3rem 5rem;
-        background-image: linear-gradient(to right bottom, rgba($color-primary, 0.7), rgba($color-primary-light, 0.1));
-        transform: skewX(-10deg);
+        background-image: linear-gradient(to right bottom, rgba($color-primary, 0.7), rgba($color-primary, 0.1));
+        transform: skewX(-10deg) translateX(5rem);
+        padding: 8rem 10rem 8rem 8rem;
 
         &:hover {
             background-color: rgba($color-primary, 0.7);
@@ -25,9 +20,12 @@
         }
     }
 
-    &__photo {
-        width: 50rem;
-        padding: 3rem 0;
-        filter: grayscale(60%);
+    &__photo-box {
+        img {
+            width: 40rem;
+            filter: grayscale(60%);
+        }
+
+        transform: translateX(-5rem);
     }
 }
