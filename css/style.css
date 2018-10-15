@@ -14,13 +14,15 @@ body {
   color: #ecf0f1;
   line-height: 1.6; }
 
-.container > * {
-  padding: 0 8rem; }
+::selection {
+  background-color: #fff;
+  color: #c0392b; }
 
 .header {
+  padding: 0 5vw;
+  background-color: rgba(255, 255, 255, 0.3);
   position: fixed;
   width: 100%;
-  background-color: rgba(255, 255, 255, 0.3);
   z-index: 1000;
   transition: all 2s;
   display: flex;
@@ -70,6 +72,7 @@ body {
     position: relative; }
 
 .home {
+  padding: 10vw 5vw;
   background-image: linear-gradient(to right, rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url(../img/toronto.jpg);
   background-size: cover;
   background-position: bottom;
@@ -108,16 +111,17 @@ body {
     padding: 4rem 2rem; }
 
 .about {
-  padding: 10rem 8rem;
+  padding: 8vw 5vw;
   background-color: rgba(0, 0, 0, 0.9);
   display: flex;
   align-items: center; }
   .about__text-box {
     font-size: 1.5rem;
     font-family: "K2D", sans-serif;
-    background-image: linear-gradient(to right bottom, rgba(192, 57, 43, 0.5), #e74c3c);
+    background-color: rgba(255, 255, 255, 0.3);
     transform: translateX(10rem);
-    padding: 8rem 20rem 8rem 8rem; }
+    padding: 8rem 20rem 8rem 8rem;
+    transition: all 2s; }
     .about__text-box:hover {
       background-color: #c0392b; }
   .about__photo-box {
@@ -131,7 +135,7 @@ body {
   grid-template-rows: repeat(3, 10vw);
   grid-template-columns: repeat(6, 1fr);
   grid-gap: 3rem 1.5rem;
-  padding: 10rem 5rem; }
+  padding: 8vw 5vw; }
   .skills__img {
     display: block;
     width: 100%;
@@ -147,3 +151,28 @@ body {
     position: relative; }
   .skills:hover .skills__item:not(:hover) img {
     filter: grayscale(50%) blur(0.5rem); }
+
+.experience {
+  padding: 8vw 5vw;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-gap: 5rem;
+  background-image: linear-gradient(to right, rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url(../img/experience.jpg);
+  background-size: cover;
+  background-position: bottom;
+  background-attachment: fixed; }
+  .experience .job {
+    display: grid;
+    grid-template-columns: 1fr min-content;
+    background-color: rgba(255, 255, 255, 0.3);
+    transition: all 2s; }
+    .experience .job:hover {
+      background-color: #c0392b; }
+    .experience .job__details {
+      grid-row: 2 / span 1; }
+    .experience .job__logo-box {
+      grid-row: 1 / span 2;
+      border: 2px solid red; }
+    .experience .job__logo-img {
+      width: 20rem;
+      display: block; }

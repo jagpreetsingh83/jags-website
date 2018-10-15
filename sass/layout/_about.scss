@@ -1,5 +1,5 @@
 .about {
-    padding: 10rem 8rem;
+    padding: 8vw 5vw;
     background-color: rgba(#000, $alpha: 0.9);
     display: flex;
     align-items: center;
@@ -7,12 +7,13 @@
     &__text-box {
         font-size: 1.5rem;
         font-family: $font-secondary;
-        background-image: linear-gradient(to right bottom, rgba($color-primary, 0.5), rgba($color-primary-light, 1));
+        background-color: rgba(#fff, 0.3);
         transform: translateX(10rem);
         padding: 8rem 20rem 8rem 8rem;
+        transition: all 2s;
 
         &:hover {
-            background-color: rgba($color-primary, 1);
+            background-color: $color-primary;
         }
     }
 

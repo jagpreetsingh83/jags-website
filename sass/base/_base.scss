@@ -16,3 +16,8 @@ body {
     color: $color-grey-light;
     line-height: 1.6;
 }
+
+::selection {
+    background-color: #fff;
+    color: $color-primary;
+}
