@@ -10,7 +10,7 @@ html {
   font-size: 62.5%; }
 
 body {
-  font-family: "Roboto", sans-serif;
+  font-family: "K2D", sans-serif;
   color: #ecf0f1;
   line-height: 1.6; }
 
@@ -18,9 +18,18 @@ body {
   background-color: #fff;
   color: #c0392b; }
 
+.heading-3 {
+  font-size: 3rem; }
+
+.heading-4 {
+  font-size: 2rem; }
+
+.heading-5 {
+  font-size: 1.5rem; }
+
 .header {
   padding: 0 5vw;
-  background-color: rgba(255, 255, 255, 0.3);
+  background-color: rgba(192, 57, 43, 0.8);
   position: fixed;
   width: 100%;
   z-index: 1000;
@@ -162,15 +171,23 @@ body {
   .experience .job {
     display: grid;
     grid-template-columns: 1fr min-content;
-    background-color: rgba(255, 255, 255, 0.3);
+    background-color: rgba(0, 0, 0, 0.3);
     transition: all 2s; }
-    .experience .job:hover {
-      background-color: #c0392b; }
+    .experience .job__company, .experience .job__duration, .experience .job__details, .experience .job__logo-box {
+      padding: 3rem; }
     .experience .job__details {
-      grid-row: 2 / span 1; }
+      grid-row: 3 / span 1; }
     .experience .job__logo-box {
-      grid-row: 1 / span 2;
-      border: 2px solid red; }
+      grid-row: 1 / span 3; }
     .experience .job__logo-img {
-      width: 20rem;
-      display: block; }
+      width: 15rem;
+      height: 15rem;
+      object-fit: contain;
+      display: block;
+      background-color: #fff;
+      margin: 0 auto;
+      border-radius: 50%;
+      padding: 2rem;
+      filter: brightness(80%); }
+      .experience .job__logo-img:hover {
+        filter: none; }
