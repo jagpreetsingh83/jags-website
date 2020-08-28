@@ -1,0 +1,53 @@
+.home {
+    padding: 10vw 5vw;
+    background-image: linear-gradient(to right, rgba(#000, 0.7), rgba(#000, 0.7)), url(../img/toronto.jpg);
+    background-size: cover;
+    background-position: bottom;
+    background-attachment: fixed;
+    height: 80vh;
+
+    // DISPLAY
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-end;
+
+    &__box {
+        background-image: linear-gradient(to right bottom, rgba($color-primary, 0.7), rgba($color-primary-light, 0.1));
+        width: 80rem;
+        transform: skewX(-10deg);
+        font-size: 5rem;
+        font-family: $font-secondary;
+        padding: 3rem;
+        position: relative;
+        transition: all .2s;
+
+        span:before, span:after {
+            font-size: 20rem;
+            font-family: sans-serif;
+            color: rgba(#fff, 0.5);
+            position: absolute;
+        }
+
+        span:before {
+            content: '\201C';
+            top: -10rem;
+            left: -3rem;
+        }
+
+        span:after {
+            content: '\201D';
+            bottom: -20rem;
+            right: -2.7rem;
+        }
+
+        &:hover {
+            background-color: rgba($color-primary, 0.7);
+        }
+    }
+
+    &__author {
+        font-size: 2rem;
+        padding: 4rem 2rem;
+    }
+}

@@ -1,0 +1,193 @@
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit; }
+
+html {
+  box-sizing: border-box;
+  font-size: 62.5%; }
+
+body {
+  font-family: "K2D", sans-serif;
+  color: #ecf0f1;
+  line-height: 1.6; }
+
+::selection {
+  background-color: #fff;
+  color: #c0392b; }
+
+.heading-3 {
+  font-size: 3rem; }
+
+.heading-4 {
+  font-size: 2rem; }
+
+.heading-5 {
+  font-size: 1.5rem; }
+
+.header {
+  padding: 0 5vw;
+  background-color: rgba(192, 57, 43, 0.8);
+  position: fixed;
+  width: 100%;
+  z-index: 1000;
+  transition: all 2s;
+  display: flex;
+  justify-content: space-between;
+  align-items: center; }
+  .header:hover {
+    background-color: #c0392b; }
+
+.logo {
+  padding: 1rem;
+  background-color: rgba(0, 0, 0, 0.3); }
+  .logo__img {
+    height: 5rem;
+    display: block; }
+
+.navigation {
+  list-style: none;
+  display: flex;
+  align-items: center; }
+  .navigation__item {
+    display: block;
+    position: relative;
+    transform: color 0.2 ease-in 0.6s; }
+    .navigation__item::before {
+      content: "";
+      height: 3px;
+      width: 100%;
+      background-color: rgba(0, 0, 0, 0.3);
+      position: absolute;
+      bottom: 0;
+      transform: scaleX(0) skewX(-10deg);
+      transition: transform 0.2s, height 0.4s ease-in 0.2s;
+      z-index: 0; }
+    .navigation__item:hover::before {
+      transform: scaleX(1) skewX(-10deg);
+      height: 100%; }
+  .navigation__link:link, .navigation__link:visited {
+    font-size: 1.5rem;
+    font-family: "K2D", sans-serif;
+    color: currentColor;
+    text-transform: uppercase;
+    text-decoration: none;
+    font-weight: bolder;
+    display: block;
+    padding: 1.5rem 3rem;
+    z-index: 10;
+    position: relative; }
+
+.home {
+  padding: 10vw 5vw;
+  background-image: linear-gradient(to right, rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url(../img/toronto.jpg);
+  background-size: cover;
+  background-position: bottom;
+  background-attachment: fixed;
+  height: 80vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-end; }
+  .home__box {
+    background-image: linear-gradient(to right bottom, rgba(192, 57, 43, 0.7), rgba(231, 76, 60, 0.1));
+    width: 80rem;
+    transform: skewX(-10deg);
+    font-size: 5rem;
+    font-family: "K2D", sans-serif;
+    padding: 3rem;
+    position: relative;
+    transition: all .2s; }
+    .home__box span:before, .home__box span:after {
+      font-size: 20rem;
+      font-family: sans-serif;
+      color: rgba(255, 255, 255, 0.5);
+      position: absolute; }
+    .home__box span:before {
+      content: '\201C';
+      top: -10rem;
+      left: -3rem; }
+    .home__box span:after {
+      content: '\201D';
+      bottom: -20rem;
+      right: -2.7rem; }
+    .home__box:hover {
+      background-color: rgba(192, 57, 43, 0.7); }
+  .home__author {
+    font-size: 2rem;
+    padding: 4rem 2rem; }
+
+.about {
+  padding: 8vw 5vw;
+  background-color: rgba(0, 0, 0, 0.9);
+  display: flex;
+  align-items: center; }
+  .about__text-box {
+    font-size: 1.5rem;
+    font-family: "K2D", sans-serif;
+    background-color: rgba(255, 255, 255, 0.1);
+    transform: translateX(10rem);
+    padding: 8rem 20rem 8rem 8rem;
+    transition: all 2s; }
+  .about__photo-box {
+    transform: translateX(-10rem); }
+    .about__photo-box img {
+      width: 40rem;
+      filter: grayscale(60%); }
+
+.skills {
+  display: grid;
+  grid-template-rows: repeat(3, 10vw);
+  grid-template-columns: repeat(6, 1fr);
+  grid-gap: 3rem 1.5rem;
+  padding: 8vw 5vw; }
+  .skills__img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    filter: grayscale(100%);
+    transform: scale(1);
+    transition: all .2s; }
+  .skills__item:hover img {
+    filter: none;
+    transform: scale(1.5);
+    z-index: 10;
+    position: relative; }
+  .skills:hover .skills__item:not(:hover) img {
+    filter: grayscale(50%) blur(0.5rem); }
+
+.experience {
+  padding: 8vw 5vw;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-gap: 5rem;
+  background-image: linear-gradient(to right, rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url(../img/experience.jpg);
+  background-size: cover;
+  background-position: bottom;
+  background-attachment: fixed; }
+  .experience .job {
+    display: grid;
+    grid-template-columns: 1fr min-content;
+    background-color: rgba(0, 0, 0, 0.3);
+    transition: all 2s; }
+    .experience .job__company, .experience .job__duration, .experience .job__details, .experience .job__logo-box {
+      padding: 3rem; }
+    .experience .job__details {
+      grid-row: 3 / span 1; }
+    .experience .job__logo-box {
+      grid-row: 1 / span 3; }
+    .experience .job__logo-img {
+      width: 15rem;
+      height: 15rem;
+      object-fit: contain;
+      display: block;
+      background-color: #fff;
+      margin: 0 auto;
+      border-radius: 50%;
+      padding: 2rem;
+      filter: brightness(80%); }
+      .experience .job__logo-img:hover {
+        filter: none; }
